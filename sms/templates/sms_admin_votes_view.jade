@@ -20,12 +20,12 @@ block admin_content
                   for nominee in nominees
                     if nominee.category == category.pk
                       tr
-                        td(style='width:80%') {{ nominee.number}} - {{ nominee.name }}
+                        td(style='width:80%') {{ nominee.number }} - {{ nominee.name }}
                         td(style='width:20%') {{ nominee.votes }}
                 tfoot
                   tr
                     td
                       for total_vote in total_votes
                         if total_vote.category == category.pk
-                          Ääniä yhteensä: {{ total_vote.votes}}
+                           Yhteensä {{ total_vote.votes }} ääntä.
                     td
